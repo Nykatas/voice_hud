@@ -3,23 +3,23 @@ local isCurrentlySpeaking = false
 local voiceDistance = nil
 local runLoop 		= true
 
-RegisterNetEvent('SaltyChat_MicStateChanged')
-AddEventHandler('SaltyChat_MicStateChanged', function(IsMicrophoneMuted)
-	microphoneEnabled = not IsMicrophoneMuted
+RegisterNetEvent('yaca:external:microphoneMuteStateChanged')
+AddEventHandler('yaca:external:microphoneMuteStateChanged', function(state)
+	microphoneEnabled = not state
 end)
 
-RegisterNetEvent('SaltyChat_TalkStateChanged')
-AddEventHandler('SaltyChat_TalkStateChanged', function(isTalking)
-	isCurrentlySpeaking = isTalking
+RegisterNetEvent('yaca:external:isTalking')
+AddEventHandler('yaca:external:isTalking', function(state)
+	isCurrentlySpeaking = state
 end) 
 
-RegisterNetEvent('SaltyChat_VoiceRangeChanged')
-AddEventHandler('SaltyChat_VoiceRangeChanged', function(voiceRange)
-    voiceDistance = voiceRange
+RegisterNetEvent('yaca:external:voiceRangeUpdate')
+AddEventHandler('yaca:external:voiceRangeUpdate', function(range)
+    voiceDistance = range
 end)
 
 Citizen.CreateThread(function()
-    voiceDistance = exports["saltychat"]:GetVoiceRange()
+    voiceDistance = exports["yaca-voice"]:getVoiceRange()
 
     while true do
         Citizen.Wait(100)
