@@ -1,6 +1,6 @@
 # RedM Voice Hud  for YACA
 
-This is a modification of voice_hud made by Nykata. It is rewritten to work with YACA Voice (https://yaca.systems/) All credits go to Nykata for the base script.
+This is a modification of voice_hud made by Nykata (https://github.com/Nykatas/voice_hud/tree/main). It is rewritten to work with YACA Voice (https://yaca.systems/) All credits go to Nykata for the base script.
 
 Original Readme:
 A simple redm voice hud. I saw a lot of ppl who were looking for something like this so i'm just gonna share it.
