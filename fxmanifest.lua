@@ -7,6 +7,7 @@ shared_script {
 }
 
 client_script {
+	'client/voicesystems/*.lua',
 	'client/client.lua'
 }
 
