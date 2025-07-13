@@ -18,7 +18,7 @@ Citizen.CreateThread(function()
 		if RunLoop then
 			SendNUIMessage({
 				action = "updateStatusHud",
-				show = not IsRadarHidden(),    
+				show = not IsRadarHidden(),
 				voiceRange = (MicrophoneEnabled and (VoiceDistance and tostring(VoiceDistance) or "?") .. Config.MeterText) or Config.MicOffText,
                 micEnabled = MicrophoneEnabled
             })
