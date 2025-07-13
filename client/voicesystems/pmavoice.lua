@@ -1,8 +1,7 @@
--- UNTESTED - Please test this if you can and if there are any errors open an issue in the github repository. (https://github.com/Nykatas/voice_hud)
-if not (Config.VoiceSystem == "pma-voice") then return end
+if Config.VoiceSystem ~= "pma-voice" then return end
 
 function InitVoiceSystem()
-    VoiceDistance = exports["saltychat"]:GetVoiceRange()
+    VoiceDistance = LocalPlayer.state.proximity.distance or '?'
 
     Citizen.CreateThread(function()
         while true do

@@ -1,4 +1,4 @@
-if not (Config.VoiceSystem == "yaca-voice") then return end
+if Config.VoiceSystem ~= "yaca-voice" then return end
 
 function InitVoiceSystem()
     VoiceDistance = exports["yaca-voice"]:getVoiceRange()
