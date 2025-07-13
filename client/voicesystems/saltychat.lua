@@ -1,4 +1,4 @@
-if not (Config.VoiceSystem == "saltychat") then return end
+if Config.VoiceSystem ~= "saltychat" then return end
 
 function InitVoiceSystem()
     VoiceDistance = exports["saltychat"]:GetVoiceRange()
