@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Debug = false -- Don't activate this if you're in a live environment.
+Config.Debug = true -- Don't activate this if you're in a live environment.
 Config.MicOffText = "off"
 Config.MeterText  = "m"
 
@@ -9,7 +9,7 @@ Config.MeterText  = "m"
 -- Options: auto, saltychat, yaca-voice, pma-voice
 Config.VoiceSystem = "auto"
 
-if Coifng.VoiceSystem == "auto" then
+if Config.VoiceSystem == "auto" then
     -- Detection of running Voice System
     local voiceSystemYaca = GetResourceState('yaca-voice') == 'started'
     
